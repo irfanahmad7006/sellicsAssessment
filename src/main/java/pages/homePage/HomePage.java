@@ -133,11 +133,11 @@ public class HomePage {
     }
 
     public void enterReturnDate(String date) throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver, 15);
+        WebDriverWait wait = new WebDriverWait(driver, 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("return")));
-        JavascriptExecutor jsExecutor = ((JavascriptExecutor)driver);
+        JavascriptExecutor jsExecutor = ((JavascriptExecutor) driver);
         WebElement dateEle = driver.findElement(By.id("return"));
-        jsExecutor.executeScript("arguments[0].setAttribute('value','"+date+"');",dateEle);
+        jsExecutor.executeScript("arguments[0].setAttribute('value','" + date + "');", dateEle);
 /*
         Thread.sleep(1000);
         driver.findElement(By.id("return")).clear();
@@ -145,11 +145,11 @@ public class HomePage {
         */
     }
 
-    public void clickOnSearchBtn(){
-        driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
-        driver.findElement(searchBtn).click();
+    public void clickOnSearchBtn() {
         try {
+            driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
             Thread.sleep(10000);
+            driver.findElement(searchBtn).click();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

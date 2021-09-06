@@ -68,7 +68,7 @@ public class VisaForm {
         WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.elementToBeClickable(submitBtn));
         try {
-            Thread.sleep(7000);
+            Thread.sleep(10000);
             driver.findElement(submitBtn).click();
         } catch (InterruptedException e) {
             e.printStackTrace();

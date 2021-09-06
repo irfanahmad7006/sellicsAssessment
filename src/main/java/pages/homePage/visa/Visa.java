@@ -86,9 +86,9 @@ public class Visa {
     }
     public void setDate(String date){
         WebDriverWait wait = new WebDriverWait(driver,15);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(dateField));
         JavascriptExecutor jsExecutor = ((JavascriptExecutor)driver);
         WebElement dateEle = driver.findElement(dateField);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(dateField));
         jsExecutor.executeScript("arguments[0].setAttribute('value','"+date+"');",dateEle);
         System.out.println("Date is entered");
     }
