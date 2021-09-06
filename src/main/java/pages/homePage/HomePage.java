@@ -2,6 +2,7 @@ package pages.homePage;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -113,22 +114,35 @@ public class HomePage {
     }
 
     public void enterDepartureDate(String date) {
+        WebDriverWait wait = new WebDriverWait(driver, 15);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("departure")));
+        JavascriptExecutor jsExecutor = ((JavascriptExecutor)driver);
+        WebElement dateEle = driver.findElement(By.id("departure"));
+        jsExecutor.executeScript("arguments[0].setAttribute('value','"+date+"');",dateEle);
 
-
+//        removed sendKeys methods instead used the javascript executor
+/*
         try {
             driver.findElement(By.id("departure")).clear();
             Thread.sleep(1000);
             driver.findElement(By.id("departure")).sendKeys(date);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
 
     }
 
     public void enterReturnDate(String date) throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, 15);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("return")));
+        JavascriptExecutor jsExecutor = ((JavascriptExecutor)driver);
+        WebElement dateEle = driver.findElement(By.id("return"));
+        jsExecutor.executeScript("arguments[0].setAttribute('value','"+date+"');",dateEle);
+/*
         Thread.sleep(1000);
         driver.findElement(By.id("return")).clear();
         driver.findElement(By.id("return")).sendKeys(date);
+        */
     }
 
     public void clickOnSearchBtn(){

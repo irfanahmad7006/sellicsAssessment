@@ -24,7 +24,7 @@ public class VisaForm {
     private By date = By.xpath("//input[@name='date']");
     private By notes = By.xpath("//textarea[@placeholder='Notes']");
 
-    private By submitBtn = By.xpath("//button[@id='submit']");
+    private By submitBtn = By.xpath("//button[@id='submit']//i");
 
     private By submissionStatus = By.xpath("//h2[@class='sec__title_list text-center my-5']/strong");
     private By submissionText = By.xpath("//h2[text()='Your visa form has been submitted']");
@@ -68,7 +68,7 @@ public class VisaForm {
         WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.elementToBeClickable(submitBtn));
         try {
-            Thread.sleep(3000);
+            Thread.sleep(7000);
             driver.findElement(submitBtn).click();
         } catch (InterruptedException e) {
             e.printStackTrace();
