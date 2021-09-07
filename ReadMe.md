@@ -33,11 +33,11 @@ Framework Architecture
 		|	|	|_Visa.java
 		|	|	|...
 		|_src/test/resources
-            |_configFiles
-            |   |_config.properties
-			|_featuresFiles
-				|_Sellics Assessment.feature
-				|...
+            |    |_configFiles
+            |       |_config.properties
+		|_featuresFiles
+		    |_Sellics Assessment.feature
+
 
 * **src/test/resources/features** - all the cucumber features files (files .feature ext) goes here.
 * **src/test/java/userStepDefinition** - you can define step defintion under this package for your feature steps.
