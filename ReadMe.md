@@ -52,7 +52,8 @@ You can start out by looking at `features/Sellics Assessment.feature`. You can e
 Execution
 -----------------
 You can start execution from `features/Sellics Assessment.feature` directly.
-You can start execution from `src/test/java/testRunner/TestRunner.java` too.
+You can start execution from `src/test/java/testRunner/TestRunner.java` Or run `mvn test` in cmd.
+
 
 Predefined steps
 -----------------
@@ -60,7 +61,7 @@ By using predefined steps you can automate your test cases more quickly, more ef
 
 Set-Up
 -----------------
-Java version - jdk 1.8.0_281
-Maven version - apache maven 3.8.1      
+Java version - jdk 1.8.0_281,
+Maven version - apache maven 3.8.1,      
 Cucumber Plugin
 
