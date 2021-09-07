@@ -47,8 +47,20 @@ Writing a test
 --------------
 The cucumber features goes in the `features` library and should have the ".feature" extension.
 
-You can start out by looking at `features/my_first.feature`. You can extend this feature or make your own features using some of the predefined steps that comes with selenium-cucumber.
+You can start out by looking at `features/Sellics Assessment.feature`. You can extend this feature or make your own features using some of the predefined steps that comes with selenium-cucumber.
+
+Execution
+-----------------
+You can start execution from `features/Sellics Assessment.feature` directly.
+You can start execution from `src/test/java/testRunner/TestRunner.java` too.
 
 Predefined steps
 -----------------
 By using predefined steps you can automate your test cases more quickly, more efficiently and without much coding.
+
+Set-Up
+-----------------
+Java version - jdk 1.8.0_281
+Maven version - apache maven 3.8.1      
+Cucumber Plugin
+

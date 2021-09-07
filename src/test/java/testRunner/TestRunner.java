@@ -12,5 +12,5 @@ import org.junit.runner.RunWith;
         plugin = {"pretty"},
         publish = true
 )
-public class MyTestRunner {
+public class TestRunner {
 }
