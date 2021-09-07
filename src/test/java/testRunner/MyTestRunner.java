@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/FeatureFiles"},
+        features = {"src/test/resources/FeatureFiles/Sellics Assement.feature"},
         glue = {"pagesStepDef", "MyHooks"},
         plugin = {"pretty"},
         publish = true

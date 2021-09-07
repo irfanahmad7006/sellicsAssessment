@@ -65,10 +65,11 @@ public class VisaForm {
         driver.findElement(notes).sendKeys(notesTxt);
     }
     public void clickOnSubmitBtn(){
-        WebDriverWait wait = new WebDriverWait(driver, 15);
-        wait.until(ExpectedConditions.elementToBeClickable(submitBtn));
+
         try {
             Thread.sleep(10000);
+            WebDriverWait wait = new WebDriverWait(driver, 15);
+            wait.until(ExpectedConditions.elementToBeClickable(submitBtn));
             driver.findElement(submitBtn).click();
         } catch (InterruptedException e) {
             e.printStackTrace();
